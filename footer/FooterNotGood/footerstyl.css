@@ -1,0 +1,119 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+div{
+    border: 1px solid transparent;
+}
+.wrapper{
+    width: 1400px;
+    margin: auto auto;
+    background-color: rgba(110, 110, 110, 0.84);
+}
+#other{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+footer{
+    font-family: Tahoma, Helvetica, sans-serif;
+    width: 100%;
+}
+.heading,p#para{
+    text-align: center;
+    text-shadow: 0 1px 0px #777777;
+    color: snow;
+}
+div#boxes{
+    width: 100%;
+    padding: 0px;
+    height: 240px;
+    text-align: center;
+}
+.box{
+    display: inline-block;
+    width: 200px;
+    height: 220px;
+    overflow: hidden;
+    margin-right: 15px;
+    background-color: white;
+}
+.box p,box h4{
+    margin-top: -13px;
+}
+img{
+    width: 160px;
+    height: 80px;
+    margin: auto auto;
+    padding: 0px;
+}
+div#lowerPart{
+    clear: both;
+    background: snow;
+    margin-top: -90px;
+}
+/*##########################Social media icons##########################*/
+#followUs{
+    margin-top: 150px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook,.fa-twitter,.fa-rss,.fa-youtube,.fa-linkedin,.fa-google-plus {
+    padding:10px 14px;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+.fa:hover{
+    transform: rotateY(360deg);
+}
+.hide{
+    display: none;
+    background-color: black;
+    color: white;
+    padding-top: 6px;
+    height: 27px;
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Input</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <style>
+      .container{
+        margin-top: 100px;
+      }
+      .form{
+        width: 50%;
+        position: relative;
+        height: 60px;
+        margin-top: 50px;
+        overflow: hidden;
+      }
+      .form input{
+        width: 100% !important;
+        height: 100% !important;
+        color: gray;
+        border: none;
+        outline: none;
+        padding-top: 15px;
+      }
+      .form label{
+        position: absolute;
+        bottom: 0px;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+      }
+      .form label::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 100%;
+        width: 100%;
+        border-bottom: 3px solid #5fa8d3;
+        transform: translateX(-100%);
+        transition: transform .3s ease;
+      }
+      .content-name{
+        position: absolute;
+        bottom: 0px;
+        left: 0%;
+        transition: all .3s ease;
+      }
+      .form input:focus + .label-name .content-name
+      ,form input:valid + .label-name .content-name{/*everytime we focus the input it will effect the lable-name .content-name*/
+        transform: translateY(-150%);
+        font-size: 14px;
+        color: #5fa8d3;
+      }
+      .form input:focus + .label-name::after
+      ,form input:valid + .label-name::after{
+        transform: translateX(0%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="form form-group">
+          <input type="text" autocomplete="off" required name="name">
+          <label for="name" class="label-name">
+            <span class="content-name">Name</span>
+          </label>
+        </div>
+    </form>
+    </div>
+     
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script>
+
+    </script> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

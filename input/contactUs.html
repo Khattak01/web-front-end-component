@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group has-feedback">
+                        <label for="userName" class="control-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </span>
+                            <input class="form-control" type="text" name="username" id="userName"  placeholder="Login username">
+                        </div>
+                        <span class="glyphicon ok form-control-feedback"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+     /* var username = document.getElementById('userName');//$('<span class="some-class">', { text: 'x' })in jqury it is very simple
+        var add = document.getElementsByClassName('form-control-feedback')[0];
+        var parent = document.getElementById('name');
+        var found = false;
+        username.addEventListener('keydown',function () {
+            if (username.value.length > 5 && !found) {
+                var ele = document.createElement('span');
+                var eleText = document.createTextNode('Strong Username');
+                ele.appendChild(eleText);
+                ele.className = "help-block";//input.classList.add("foo");Or input.setAttribute("class", "foo");
+                var last = parent.lastElementChild;
+                last.className = "glyphicon glyphicon-ok form-control-feedback";
+                parent.insertBefore(ele,parent.lastChild);
+                parent.className = "has-success";
+                found = true;
+            }else if(found===5) {
+                var child = document.getElementsByClassName('help-block')[0];
+                if(parent.lastChild=='span' && parent.lastChild.previousSibling==='span'){
+                    found = false;
+                }
+                parent.classList.remove('has-success');
+                parent.lastElementChild.remove();
+            }
+        },false);*/
+    </script>
+    <script>
+        $(function () {
+            var found = false;
+            var icon = $('.ok');
+            var color = $('.form-group');
+            $('#userName').keydown(function () {
+               console.log($('#userName').val());
+               if ($(this).val().length > 4 && !found){
+                   color.removeClass("has-warning");
+                   var str = "Strong Username";
+                   icon.removeClass('glyphicon-remove-sign');
+                   $('.ok').addClass('glyphicon-ok');
+                   $('.help-block').remove();
+                   $('.form-group').append('<span class="help-block">'+str+'</span>');
+                   $('.form-group').addClass('has-success');
+                   found = true;
+               }
+               else if ($(this).val().length < 4) {
+                   str = "weak Username";
+                   $('.help-block').remove();
+                   icon.removeClass('glyphicon-ok');
+                   icon.addClass('glyphicon-remove-sign');
+                   if(color.className==='has-success'){
+                       color.removeClass("has-success");
+                   }
+                   color.addClass('has-warning');
+                   $('.form-group').append('<span class="help-block">'+str+'</span>');
+                   found = false;
+               }
+           });
+        });
+    </script>
+</body>
+</html>

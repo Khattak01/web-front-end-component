@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading border</title>
+    <style>
+        .heading-box{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+        }
+        .heading-main {
+            background-image: linear-gradient(to right bottom, #F76C6C, #c52e2e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            height: 45px; 
+        }
+        .heading-main-border{
+            /*width: 20%;*/
+            height: 25px;
+            display: flex;
+           /* transform: translateY(-5px);*/
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            
+        }
+        .heading-main-border span{
+            display: inline-block;
+            width: 70px;
+            height: 3px;
+            background-image: linear-gradient(to right bottom, #F76C6C, #c52e2e);
+            position: relative;
+        }
+        .heading-main-border span::before
+        {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: 0;
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            background-image: linear-gradient(to right bottom, #F76C6C, #c52e2e);
+            animation: borderAnimation 4s infinite;
+        }
+        .heading-main-border span:first-child{
+            width: 110px;
+        }
+        .heading-main-border span:nth-child(2){
+            width: 80px;
+            height: 2.5px;
+        }
+        .heading-main-border span:not(:last-child){
+            margin-bottom: 5px;
+            position: relative;
+        }
+        .heading__border{
+            display: flex;
+        }
+        .heading__circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            transform: translateY(-2px);
+            margin: 0 3px;
+            background-image: linear-gradient(to right bottom, #F8E9A1, #f0d550);
+            animation: borderRotate 3s infinite; 
+        }
+        @keyframes borderAnimation {
+            0%{
+                left: 0;
+            }
+            25%{
+                left: 50%;
+            }
+            50%{
+                left: 95%;
+            }
+            75%{
+                left: 50%;
+            }
+            100%{
+                left: 0;
+            }
+        }
+        @keyframes borderRotate {
+            0%{
+                transform: translateY(-2px) rotate(72deg);
+            }
+            25%{
+                transform: translateY(-2px) rotate(144deg);
+            }
+            50%{
+                transform: translateY(-2px) rotate(216deg);
+            }
+            75%{
+                transform: translateY(-2px) rotate(288deg);
+            }
+            99%{
+                transform: translateY(-2px) rotate(360deg);
+            }
+            100%{
+                transform: translateY(-2px) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heading-box">
+        <h1 class="heading-main">About</h1>
+        <div class="heading__border">
+            <div class="heading-main-border">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="heading__circle">
+                
+            </div>
+           <div class="heading-main-border">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

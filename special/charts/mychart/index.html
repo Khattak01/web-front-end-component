@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <title>My Chart.js Chart</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+</head>
+<style>
+      #btn{
+          text-align: center;
+      }
+      .active{
+          opacity: 0.5;
+      }
+      button{
+          width: 90px;
+          height: 35px;
+          outline: none;
+          color: aliceblue;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          background-color: brown;
+      }
+      .second{
+        box-sizing: border-box;
+        max-width: 95%;
+
+      }
+      .adjust{
+        height: 20px;
+      }
+</style>
+<body>
+    <div class="<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm">
+            <div id="btn">
+                <button data-btnId="today" class="active bt">Today</button>
+                <button data-btnId="week" class="bt">Week</button>
+                <button data-btnId="month" class="bt">Month</button>
+            </div>
+          <div class="container">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="adjust"></div>
+          <canvas id="bar-chart" class="second"></canvas>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="script.js">    
+  </script>
+  <script src="script2.js"></script>
+</body>
+</html>

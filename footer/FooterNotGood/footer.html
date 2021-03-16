@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+    </style>
+    <link rel="stylesheet" type="text/css" href="footerstyl.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="other">
+            <h1>Other content</h1>
+        </div>
+
+
+
+        <footer style="clear: both">
+            <div class="heading">
+                <h2>Feel freeto visit any of our locations</h2>
+            </div>
+            <div>
+                <p id="para">Paragraph</p>
+            </div>
+            <div id="boxes">
+                <div class="box" data-box = "box1" id="box1">
+                    <img src="pic2.png">
+                    <h4>Peshawar Medical Center</h4>
+                    <p>Haji Camp, Peshawar</p>
+                    <div class="hide box1">More info</div>
+                </div>
+                <div class="box" id="box2" data-box="box2">
+                    <img src="pic3.png">
+                    <h4>Saad Medical Center</h4>
+                    <p>Islamabad, Street 7, Islambad</p>
+                    <div class="hide box2">More info</div>
+                </div>
+                <div class="box" id="box3" data-box="box3">
+                    <img src="pic4.png">
+                    <h4>RWP Health Care</h4>
+                    <p>Qasim Base, Dhamial Camp RWP</p>
+                    <div class="hide box3">More info</div>
+                </div>
+                <div class="box" id="box4" data-box="box4">
+                    <img src="pic5.jpg">
+                    <h4>Khan Medical Center</h4>
+                    <p>Bkra Mandi, near KFC, RWP</p>
+                    <div class="hide box4">More info</div>
+                </div>
+            <div>
+            <script>
+                $(function () {
+                    var boxInfo;
+                    $('#boxes .box').on('mouseover click',function () {
+                        boxInfo = $(this).attr('data-box');
+                        $(this).css({
+                            'border':'2px solid black'
+                        })
+                        $('.'+boxInfo).show(1000);
+                    }).on('mouseleave',function () {
+                        $('.'+boxInfo).hide(1000);
+                        $(this).css({
+                            'border':'0px solid black'
+                        })
+                    })
+                })
+            </script>
+            <div id="lowerPart">
+                <div id="followUs">
+                    <div class="footer-social-icons">
+                        <ul class="social-icons">
+                            <li><a href="#" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+                            <li><a href="#" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p id="copyRight">
+                    Copyright &copy; 2017, All rights reserved
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

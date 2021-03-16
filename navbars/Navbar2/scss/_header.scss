@@ -1,0 +1,98 @@
+.main-header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100vw;
+    padding: 0 10vw;
+    color: #000000;
+    z-index: 1;
+    transition: all  .4s ease-out;
+    backface-visibility: hidden;
+    a{
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+    }
+    .nav-links{
+        display: flex;
+        list-style: none;
+        .nav-link{
+            transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            &:nth-last-of-type(2){
+                transition-delay: .1s;
+            }
+            &:nth-last-of-type(3){
+                transition-delay: .2s;
+            }
+            &:nth-last-of-type(4){
+                transition-delay: .3s;
+            }
+            &:nth-last-of-type(5){
+                transition-delay: .4s;
+            }
+            a{
+                margin: .2rem;
+                padding: 1rem .5rem;
+                &:hover{
+                    background:rgba(255,255,255,.2);
+                }
+            }
+        }
+    }
+    .menu-icon{
+        position: relative;
+        padding: 26px 10px;
+        display: none;
+        cursor: pointer;
+        z-index: 1;
+        &__line{
+            display: block;
+            position: relative;
+            background: #000;
+            height: 2px;
+            width: 20px;
+            border-radius: 4px;
+            transition: background .5s ease;
+            &::before,&::after{
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+                background: #000;
+                transition: background .5s ease;
+            } 
+            &::before{
+                transform: translateY(-7px);
+            }            
+            &::after{
+                transform: translateY(7px);
+            }
+        }
+    }
+    .menu-btn{
+        display: none;
+        &:focus ~ .menu-icon{
+            .menu-icon__line{
+                &::after{
+                    transform: translateY(-7px);
+                }
+                &::before{
+                    transform: translateY(7px);
+                }
+            }
+        }
+    }
+    &.scrolled{
+        height: 50px;
+        background: rgba(#000000,.9);
+        color: #ffffff;
+        .menu-icon{
+            &__line,&__line::before,&__line::after{
+                background: #ffffff;
+            }
+        }
+    }
+}

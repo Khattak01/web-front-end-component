@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+	<style>
+.group 			  { 
+  position:relative; 
+  margin-bottom:45px;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label,textarea:focus ~ label, textarea:valid ~ label		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after,textarea:focus ~ .bar:before,textarea:focus ~ .bar:after{
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight,textarea:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+textarea{
+	border: none !important;
+}
+textarea:hover,textarea:focus,textarea:active{
+	border: none !important;
+	outline: none;
+}
+.contactWrapper h2{
+	text-align: center;
+}
+.contactWrapper h2, .contactWrapper p{
+	padding-left: 20%;
+	box-sizing: border-box;
+}
+.contactWrapper div p,.contactWrapper h2{
+	font-weight: bolder;
+	font-family: monospace;
+	letter-spacing: 1.1px;
+}
+    </style>
+</head>
+  <body>
+	<div class="container-fluid">				 
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="contactWrapper">
+					<h2>Heading</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. praesentium nisi cumque a, doloribus, rerum reiciendis quos tenetur quis aliquid quisquam officia possimus accusamus!</p>
+					<div>
+						<p>Address <i class="fas fa-map-marker"></i> : Nowshera Chrat Spin Khak</p>
+						<p>Email <i class="fas fa-envelope-square"></i> : @gmail.com</p>
+						<p>PH# <i class="fas fa-phone"></i> : 03065223800</p>
+					</div>
+				</div>
+    
+			</div>
+			<div class="col-lg-6">
+					<form>
+					<div class="group">      
+							<input type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Name</label>
+						  </div>
+							
+						  <div class="group">      
+							<input type="text" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Email</label>
+						  </div>
+						  <div class="group">      
+								<textarea type="textarea" rows="4" cols="39.5" required></textarea>
+								<span class="highlight"></span>
+								<span class="bar"></span>
+								<label>Your review</label>
+							</div>
+					</form>
+			</div>
+			</div>
+		</div>
+	</div>
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+        }
+        #chart {
+            max-width: 950px;
+            margin: 35px auto;
+        }
+        #btn{
+            text-align: center;
+        }
+        .active{
+            opacity: 0.5;
+        }
+        button{
+            width: 90px;
+            height: 35px;
+            outline: none;
+            color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: brown;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<head>
+    <body>
+        <div id="btn">
+            <button id="btn1" class="active b">Day</button>
+            <button id="btn2" class="b">Month</button>
+            <button id="btn3" class="b">Year</button>
+        </div>
+        <div id="a">
+            <div id="chart">
+        </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            var arr = [7,6,5,4,5,3,2,6]
+            var options = {
+            chart: {
+                    type: 'bar'
+                },
+                series: [{
+                    name: 'sales',
+                    data: arr
+                }],
+                xaxis: {
+                    categories: ['  city 12','city 3','   city 5','   city 6','city 20','city 1','city 13', 'city 9']
+                },
+                fill:{
+                    color:['#f00']
+                }
+            }
+            console.log(arr);
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+            var btn = $("#btn1").on("click",function(){
+                console.log(btn);
+                for(var i=0;i<arr.length;i++){
+                    arr[i] = arr[i]*2;
+                    //options.series[1] = arr;
+                }
+                console.log(options.series[1]);
+            })
+            var btn = $("#btn2").on("click",function(){
+                
+            })
+            var btn = $("#btn3").on("click",function(){
+                
+            })
+        });
+    </script>
+</head>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading</title>
+	<style type="text/css">
+		body
+		{
+			margin: 0;
+			padding: 0;
+			display: flex;justify-content: center;
+			align-items: center;
+			height: 100vh;
+			font-family: sans-serif;
+		}
+		.loader
+		{
+			position: relative;
+			font-size: 2em;
+			background: #fff;
+			color: #000;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 10px;
+			letter-spacing: .5em;
+		}
+		.loader span
+		{
+			color: #fff;
+			mix-blend-mode: difference;
+		}
+		.loader:before
+		{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 80px;
+			height: 100%;
+			background: #000;
+			animation: animate 3s linear infinite;
+		}
+		@keyframes animate
+		{
+			0%
+			{
+				left: -4%;
+			}
+			50%
+			{
+				left: 70%;
+			}
+			100%
+			{
+				left: -4%;
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="loader">
+		<span>Loading</span>
+	</div>
+</body>
+</html>
